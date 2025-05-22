@@ -8,7 +8,7 @@ class CRR:
         self.p = p
         self.T = T
 
-    def calcula_crr(self):
+    def calcula_estrat_crr(self):
         x = 1
         return self.v_t(x , 0)
 
@@ -38,7 +38,7 @@ if __name__  == '__main__':
     p = .4
     T = 5
     c1 = CRR(a,b,p,T)
-    arbol, valor = c1.calcula_crr()
+    arbol, valor = c1.calcula_estrat_crr()
     #graph = tree_to_dot(arbol, node_colour="gold") #<--- activar este para generar la imagen que se ve en tree.png, con más de 5 ciclos, se atora
     #graph.write_png("tree.png")
     print('Calculando CRR: '+ str(valor))
