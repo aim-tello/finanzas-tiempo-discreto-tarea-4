@@ -39,6 +39,6 @@ if __name__  == '__main__':
     T = 5
     c1 = CRR(a,b,p,T)
     arbol, valor = c1.calcula_crr()
-    graph = tree_to_dot(arbol, node_colour="gold")
-    graph.write_png("tree.png")
+    #graph = tree_to_dot(arbol, node_colour="gold") #<--- activar este para generar la imagen que se ve en tree.png, con más de 5 ciclos, se atora
+    #graph.write_png("tree.png")
     print('Calculando CRR: '+ str(valor))
