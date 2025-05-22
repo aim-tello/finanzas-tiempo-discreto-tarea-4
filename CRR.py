@@ -13,7 +13,7 @@ class CRR:
         return self.v_t(x , 0)
 
     def h(self, x):
-        valor =  10*x
+        valor =  10*x # Función de Payoff
         nodo = Node(str(valor))
         return nodo, valor
 
@@ -33,10 +33,10 @@ class CRR:
         return nodo, valor_a
 
 if __name__  == '__main__':
-    a = 0.5
-    b = 0.75
-    p = .4
-    T = 5
+    a = 0.5 #Valor de bajada
+    b = 0.75 #Valor de subida
+    p = .4 #Probabilidad de a
+    T = 5 #Iteraciones
     c1 = CRR(a,b,p,T)
     arbol, valor = c1.calcula_estrat_crr()
     #graph = tree_to_dot(arbol, node_colour="gold") #<--- activar este para generar la imagen que se ve en tree.png, con más de 5 ciclos, se atora
